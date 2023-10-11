@@ -9,7 +9,6 @@ export default defineType({
   title: "Product",
   description: "A list of products associated with some variants",
   type: "document",
-  liveEdit: true,
   icon: TfiShoppingCartFull,
   fields: [
     defineField({
