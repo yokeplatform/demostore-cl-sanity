@@ -9,6 +9,7 @@ export default defineType({
   title: "Product",
   description: "A list of products associated with some variants",
   type: "document",
+  liveEdit: true,
   icon: TfiShoppingCartFull,
   fields: [
     defineField({
@@ -33,6 +34,11 @@ export default defineType({
       title: "Reference",
       type: "string",
       validation: (rule) => rule.required()
+    }),
+    defineField({
+      name: "searchable",
+      title: "Searchable",
+      type: "string"
     }),
     defineField({
       name: "images",
