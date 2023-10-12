@@ -73,6 +73,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       taxonomies,
       buildLanguages
     },
-    revalidate: 10
+    revalidate: 60
   };
 };

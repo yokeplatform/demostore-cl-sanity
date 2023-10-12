@@ -181,7 +181,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
       product,
       buildLanguages
     },
-    revalidate: 10
+    revalidate: 60
   };
 };
 
