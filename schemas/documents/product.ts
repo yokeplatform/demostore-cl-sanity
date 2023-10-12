@@ -35,6 +35,11 @@ export default defineType({
       validation: (rule) => rule.required()
     }),
     defineField({
+      name: "searchable",
+      title: "Searchable",
+      type: "string"
+    }),
+    defineField({
       name: "images",
       title: "Images",
       type: "array",
