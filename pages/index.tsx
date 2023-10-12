@@ -1,6 +1,6 @@
 import _ from "lodash";
 import Image from "next/image";
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import SEOHead from "@components/SEO";
 import Countries from "@components/Countries";
 import sanityApi from "@utils/sanity/api";
@@ -30,13 +30,20 @@ const IndexPage: NextPage<Props> = ({ countries }) => {
   );
 };
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: true
+  };
+};
+
 export const getStaticProps: GetStaticProps = async () => {
   const countries = await sanityApi.getAllCountries();
   return {
     props: {
       countries
     },
-    revalidate: false
+    revalidate: 60
   };
 };
 
