@@ -1,6 +1,6 @@
 import _ from "lodash";
 import Image from "next/image";
-import { GetStaticProps, GetStaticPaths, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import SEOHead from "@components/SEO";
 import Countries from "@components/Countries";
 import sanityApi from "@utils/sanity/api";
@@ -28,13 +28,6 @@ const IndexPage: NextPage<Props> = ({ countries }) => {
       <br />
     </>
   );
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: true
-  };
 };
 
 export const getStaticProps: GetStaticProps = async () => {
